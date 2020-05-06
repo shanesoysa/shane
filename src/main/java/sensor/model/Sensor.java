@@ -123,7 +123,7 @@ public class Sensor {
 					for (int k = 0; k < values.size(); k++) {
 						
 						System.out.println("updated sensor value :"+json);
-						response = request.put("/v1/sensors/"+values.get(k));
+						response = request.put("/v1/sensors/"+values.get(k)+"/co2/" + getrandom(1,10) + "/smoke/" + getrandom(1,10));
 						System.out.println(response.statusCode());
 						Thread.sleep(5000);
 						
